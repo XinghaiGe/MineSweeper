@@ -1,3 +1,0 @@
-C:/Users/gxh/CLionProjects/MineSweeper/cmake-build-debug/CMakeFiles/MineSweeper.dir
-C:/Users/gxh/CLionProjects/MineSweeper/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/gxh/CLionProjects/MineSweeper/cmake-build-debug/CMakeFiles/rebuild_cache.dir
