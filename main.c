@@ -1,6 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-
-#include "game.h"
+#include "MineSweeper.h"
 
 void menu()
 {
@@ -38,7 +36,7 @@ void test()
 	do
 	{
 		menu();
-		printf("请选择:>");
+		printf("Please select:>");
 		scanf("%d", &input);
 		switch (input)
 		{
@@ -46,10 +44,10 @@ void test()
 			game();
 			break;
 		case 0:
-			printf("退出游戏\n");
+			printf("Exit game.\n");
 			break;
 		default:
-			printf("选择错误，请重新选择！\n");
+			printf("Select again. \n");
 			break;
 		}
 	} while (input);

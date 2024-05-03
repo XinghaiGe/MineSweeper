@@ -1,6 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-
-#include "game.h"
+#include "MineSweeper.h"
 
 void InitBoard(char board[ROWS][COLS], int rows, int cols, char set)
 {
@@ -73,7 +71,7 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS],int row, int col)
 	//判断合法性
 	while (win< row * col - EASY_COUNT)
 	{
-		printf("请输入排查雷的坐标:>");
+		printf("Please input the coord that you want to sweep: x y");
 		scanf("%d%d", &x, &y);
 		if (x >= 1 && x <= row && y >= 1 && y <= col)
 		{
@@ -81,7 +79,7 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS],int row, int col)
 			//1.踩雷
 			if (mine[x][y] == '1')
 			{
-				printf("你被炸死了\n");
+				printf("BOOM!!! You died\n");
 				DisplayBoard(mine, ROW, COL);
 				break;
 			}
@@ -96,12 +94,12 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS],int row, int col)
 		}
 		else
 		{
-			printf("输入坐标非法，请重新输入！\n");
+			printf("Illegal coord, input again.\n");
 		}
 	}
 	if (win == row * col - EASY_COUNT)
 	{
-		printf("恭喜你， 排雷成功\n");
+		printf("Congratulations!\n");
 		DisplayBoard(mine, ROW, COL);
 	}
 }
